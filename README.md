@@ -7,6 +7,10 @@
 ## Install
 ```bash
 yarn add vue-tap-mixin
+#or
+npm install vue-tap-mixin --save
+#or
+cnpm install vue-tap-mixin --save
 ```
 
 ## Init

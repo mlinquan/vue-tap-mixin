@@ -5,7 +5,7 @@
   "author": "LinQuan <i@linquan.name>",
   "scripts": {
     "build": "babel src/vue-tap-mixin.js -o dist/vue-tap-mixin.js",
-    "prepare": "npm run build"
+    "prepare": "yarn build"
   },
   "main": "dist/vue-tap-mixin.js",
   "repository": {
