@@ -7,7 +7,9 @@
     "build": "babel src/vue-tap-mixin.js -o dist/vue-tap-mixin.js",
     "prepare": "yarn build"
   },
-  "main": "dist/vue-tap-mixin.js",
+  "main": "src/vue-tap-mixin.js",
+  "unpkg": "dist/vue-tap-mixin.js",
+  "jsdelivr": "dist/vue-tap-mixin.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mlinquan/vue-tap-mixin.git"
