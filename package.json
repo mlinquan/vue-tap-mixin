@@ -1,0 +1,16 @@
+{
+  "name": "vue-tap-mixin",
+  "description": "Vue tap evnet mixin.",
+  "version": "0.0.1",
+  "author": "LinQuan <i@linquan.name>",
+  "scripts": {
+    "build": "babel src/vue-tap-mixin.js -o dist/vue-tap-mixin.js"
+  },
+  "main": "dist/vue-tap-mixin.js",
+  "repository": "git@github.com:mlinquan/vue-tap-mixin.git",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
