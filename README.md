@@ -5,16 +5,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Install
-```
+```bash
 yarn add vue-tap-mixin
 ```
 
 ## Init
-```
+```js
 import Vue from 'vue'
 
 import VueTapMixin from 'vue-tap-mixin'
-
 Vue.use(VueTapMixin)
 
 Vue.config.productionTip = false
@@ -25,7 +24,7 @@ new Vue({
 ```
 
 ## Use
-```
+```vue
 <template>
   <div id="app">
     <div @tap="goTap($event, 'Tap 2')">Tap 1</div>
