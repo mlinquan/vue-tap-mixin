@@ -7,7 +7,22 @@
     "build": "babel src/vue-tap-mixin.js -o dist/vue-tap-mixin.js"
   },
   "main": "dist/vue-tap-mixin.js",
-  "repository": "git@github.com:mlinquan/vue-tap-mixin.git",
+  "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlinquan/vue-tap-mixin.git"
+  },
+  "keywords": [
+    "vue",
+    "tap",
+    "touch",
+    "mixin"
+  ],
+  "bugs": {
+    "url": "https://github.com/mlinquan/vue-tap-mixin/issues"
+  },
+  "homepage": "https://github.com/mlinquan/vue-tap-mixin#readme",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
