@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "author": "LinQuan <i@linquan.name>",
   "scripts": {
-    "build": "babel src/vue-tap-mixin.js -o dist/vue-tap-mixin.js"
+    "build": "babel src/vue-tap-mixin.js -o dist/vue-tap-mixin.js",
+    "prepare": "npm run build"
   },
   "main": "dist/vue-tap-mixin.js",
-  "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
