@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "author": "LinQuan <i@linquan.name>",
   "scripts": {
-    "build": "rollup index.js -c rollup.config.js",
+    "build": "rollup src/vue-tap-mixin.js -c rollup.config.js",
     "prepare": "yarn build"
   },
-  "main": "index.js",
-  "unpkg": "dist/vue-tap-mixin.js",
-  "jsdelivr": "dist/vue-tap-mixin.js",
+  "main": "dist/vue-tap-mixin.cjs.js",
+  "module": "dist/vue-tap-mixin.esm.js",
+  "browser": "vue-tap-mixin.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mlinquan/vue-tap-mixin.git"
@@ -24,5 +24,10 @@
     "url": "https://github.com/mlinquan/vue-tap-mixin/issues"
   },
   "homepage": "https://github.com/mlinquan/vue-tap-mixin#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

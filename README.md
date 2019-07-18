@@ -4,33 +4,61 @@
 [![Monthly Downloads](https://img.shields.io/npm/dm/vue-tap-mixin.svg)](https://www.npmjs.com/package/vue-tap-mixin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Install
-```bash
-yarn add vue-tap-mixin
-#or
-npm install vue-tap-mixin --save
-#or
-cnpm install vue-tap-mixin --save
+Automatically convert `click` event to `tap` event without delay on the mobile side.
+Suported all Vue `click` event modifiers.
+- .stop
+- .prevent
+- .capture
+- .self
+- .once
+- .passive
+
+## Installation
+
+Install
+
+```sh
+$ npm install vue-tap-mixin --save
+# or
+$ yarn add vue-tap-mixin
 ```
 
-## Init
+### ES6
+
 ```js
-import Vue from 'vue'
 
 import VueTapMixin from 'vue-tap-mixin'
+
 Vue.use(VueTapMixin)
-
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
 ```
 
-## Use
+### CommonJS
+
+```js
+var Vue = require('vue');
+var VueTapMixin = require('vue-tap-mixin');
+
+Vue.use(VueTapMixin);
+```
+
+### Browser
+
+```html
+<script src="https://unpkg.com/vue@latest"></script>
+<script src="https://unpkg.com/vue-tap-mixin@latest"></script>
+<!-- OR -->
+<script src="path/to/vue/vue.min.js"></script>
+<script src="path/to/vue-tap-mixin/dist/vue-tap-mixin.umd.js"></script>
+
+```
+
+## Useage
 ```vue
 <template>
   <div id="app">
+    <div @click="goTap($event, 'Tap 2')">Tap 1</div>
+    <div @tap.stop="goTap($event, 'Tap 2')">Tap 1</div>
+    <div @tap.prevent="goTap($event, 'Tap 2')">Tap 1</div>
     <div @tap="goTap($event, 'Tap 2')">Tap 1</div>
     <div @tap="(e) => { goTap(e, 'Tap 2') }">Tap 2</div>
     <div @tap="goTap2('Tap 3')">Tap 3</div>
@@ -59,5 +87,5 @@ export default {
 </script>
 ```
 
-## License
-MIT
+## MIT License
+Copyright © 2019 LinQuan.
