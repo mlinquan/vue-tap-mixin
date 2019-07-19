@@ -45,7 +45,7 @@ Vue.use(VueTapMixin);
 
 ```html
 <script src="https://unpkg.com/vue@latest"></script>
-<script src="https://unpkg.com/vue-tap-mixin@latest"></script>
+<script src="https://unpkg.com/vue-tap-mixin@latest/dist/vue-tap-mixin.umd.js"></script>
 <!-- OR -->
 <script src="path/to/vue/vue.min.js"></script>
 <script src="path/to/vue-tap-mixin/dist/vue-tap-mixin.umd.js"></script>
