@@ -92,7 +92,9 @@ var VueTapMixin = {
               }
 
               function touchstartEvent(e) {
-                e.preventDefault(); //阻止 ghost click
+                if(event.name === 'click' && supportsTouchstart) {
+                  e.preventDefault(); //prevent ghost click
+                }
                 el.elm.tapEventData = {
                   timeStamp: e.timeStamp,
                   changedTouches: e.changedTouches[0]
