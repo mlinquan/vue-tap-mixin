@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Automatically convert `click` event to `tap` event without delay on the mobile side.
-Suported all Vue `click` event modifiers.
+Supported all Vue `click` event modifiers.
 - .stop
 - .prevent
 - .capture
