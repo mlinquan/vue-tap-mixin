@@ -61,7 +61,7 @@ var VueTapMixin = {
           }
           el.elm.tapEventData = {};
           var on = (el.data && el.data.on);
-          if (!on) {
+          if (!on || (el.elm.disabled && /INPUT|SELECT|OPTIONS|TEXTAREA|BUTTON/.test(el.elm.tagName))) {
             return
           }
           for (name in on) {

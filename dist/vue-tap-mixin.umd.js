@@ -1,8 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.VueTapMixin = factory());
-}(this, function () { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.VueTapMixin = factory());
+}(this, (function () { 'use strict';
 
   var inBrowser = typeof window !== 'undefined';
   var supportsPassive = false;
@@ -65,7 +65,7 @@
             }
             el.elm.tapEventData = {};
             var on = (el.data && el.data.on);
-            if (!on) {
+            if (!on || (el.elm.disabled && /INPUT|SELECT|OPTIONS|TEXTAREA|BUTTON/.test(el.elm.tagName))) {
               return
             }
             for (name in on) {
@@ -148,4 +148,4 @@
 
   return VueTapMixin;
 
-}));
+})));

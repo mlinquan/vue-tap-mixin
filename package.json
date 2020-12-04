@@ -1,7 +1,7 @@
 {
   "name": "vue-tap-mixin",
   "description": "Vue tap evnet mixin.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "LinQuan <i@linquan.name>",
   "scripts": {
     "build": "rollup src/vue-tap-mixin.js -c rollup.config.js",

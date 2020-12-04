@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Automatically convert `click` event to `tap` event without delay on the mobile side.
-Supported all Vue `click` event modifiers.
+Suported all Vue `click` event modifiers.
 - .stop
 - .prevent
 - .capture
@@ -62,6 +62,7 @@ Vue.use(VueTapMixin);
     <div @tap="goTap($event, 'Tap 2')">Tap 1</div>
     <div @tap="(e) => { goTap(e, 'Tap 2') }">Tap 2</div>
     <div @tap="goTap2('Tap 3')">Tap 3</div>
+    <button type="button" disabled="disabled" @tap="notWorks">Not trigger tap event</button>
     {{ aaa }}
   </div>
 </template>
